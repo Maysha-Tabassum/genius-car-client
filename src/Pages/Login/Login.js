@@ -12,8 +12,8 @@ const handleLogin = event => {
     <div className="text-center lg:text-left">
       <img className='w-3/4' src={img} alt="" />
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <h1 className="text-5xl font-bold">Login</h1>
+    <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <h1 className="text-5xl font-bold text-center">Login</h1>
       <div className="card-body">
         <div className="form-control">
           <label className="label">
@@ -34,7 +34,7 @@ const handleLogin = event => {
             <input className="btn btn-primary" type="submit" value="Login" />
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
     );
