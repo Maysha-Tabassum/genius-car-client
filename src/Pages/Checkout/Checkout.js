@@ -24,11 +24,12 @@ const Checkout = () => {
             message
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://genius-car-server-roan-six.vercel.app/orders', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
-            },
+                'content-type': 'application/json',
+                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                },
             body: JSON.stringify(order)
         })
         .then(res => res.json())
